@@ -1,0 +1,318 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+
+	.container
+		padding: 15px
+	
+	.hero
+		background: url(../img/header/hero-bg.jpg) 55% 100% no-repeat;
+
+	.hero__offer
+		padding-top: 50px
+		text-align: center
+	
+	.btn__white
+		margin: auto
+
+	.trigger
+		margin: auto
+		margin-top: 50px
+
+	.video
+		width: 100%;
+		max-width: 70%;
+		margin: auto;
+		margin-top: 50px;
+
+	.clients
+		padding-top: 0
+
+		&__title
+			text-align: center
+			margin-bottom: 20px
+	
+	.clients--row-first .clinets__img
+		display: none
+
+	.clients--row-first	.clients__info
+		margin: auto
+		margin-top: 50px
+
+	.clients--row-second .clinets__img
+		display: none
+
+	.clients--row-second .clients__info
+		margin: auto
+		margin-top: 50px
+
+	.type__title
+		text-align: center
+
+	.type__item
+		padding-left: 50px
+		padding-right: 30px
+
+	.type__number
+		right: 35px;
+		top: -25px;
+	
+	.about
+		margin-top: 50px
+
+		&__title
+			text-align: center
+		
+		&__text
+			max-width: 100%
+
+		&__subtext
+			max-width: 100%
+
+		&__img
+			display: none
+
+		&__modern
+			position: relative;
+			margin: auto;
+			top: 0;
+			text-align: center;
+
+			img
+				margin: auto
+
+		&__more
+			margin: auto;
+			width: 100%;
+			max-width: 70%;
+			margin-bottom: 20px;
+
+	.news
+		margin-top: 20px
+
+	.map__contact
+		position: relative
+		margin: auto
+	
+	.map
+		max-height: 700px;
+
+	.footer__info
+		display: block
+		margin: auto
+
+	.footer__menu--wrapper
+		margin: auto
+		margin-top: 20px
+
+@media only screen and (max-width : 1120px)
+
+	.video
+		background: $title-text
+
+	.type__item
+	 	width: 100%
+	 	min-height: auto
+	 	border-bottom: 2px solid $accent
+
+	.type__text
+		padding-right: 110px
+
+	.about__more
+		background: $title-text
+
+@media only screen and (max-width : 1110px)
+	.news__items
+        justify-content: space-around
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.about__img
+		right: 0
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	
+	.header__menu.menu
+		transition: all .3s ease
+		transform: translate(-150%)
+	
+	.header__menu.menu.open
+		display: block
+		max-width: 100%
+		text-align: center
+		transition: all .3s ease
+		transform: translate(0%)
+
+	.header__menu.menu.open .menu__item
+		padding: 10px 0
+
+	.header__menu.menu.open .menu__link
+		max-width: 300px
+		margin: auto
+		background: url(../img/header/triangle-menu.png) 70% 55% no-repeat;
+	
+	.header__menu.menu.open .menu__item:last-of-type .menu__link
+		background: none
+	
+	.header__menu.menu.open .menu__item--active .menu__sub
+		background: grey
+
+	.header__menu.menu.open .menu__sub .sub__item .menu__link
+		color: $white
+		background: none
+
+	.menu__item:hover::before
+		content: none
+
+	.header__burger
+		display: block
+		width: 30px
+		height: 30px
+
+		.burger__item
+			width: 100%
+			height: 3px
+			background: $accent
+			position: relative
+			margin-bottom: 7px
+	
+	.about__text
+		font-size: 20px
+		line-height: 28px
+
+	.footer__menu
+		width: 100%
+		text-align: center
+	
+	.footer__link--main
+		font-size: 20px
+		margin: 20px 0
+	
+	.footer__link
+		font-size: 16px
+	
+	.map--wrapper
+		padding: 0 15px
+
+	.type__item
+		padding: 30px
+
+@media only screen and (max-width : 570px)
+	
+	.map__contact
+		width: auto
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.type__number
+		position: relative
+		text-align: right
+
+	.type__text
+		padding-right: 0
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	
+	.hero
+		background-size: cover;
+
+		&__offer
+			padding-top: 50px
+			color: #ffffff
+			font-size: 20px
+			font-weight: 700
+			text-transform: uppercase
+			line-height: 40px
+			letter-spacing: 1px
+			margin-bottom: 102px
+
+	.hero__offer--together
+		letter-spacing: 1px
+
+	.trigger__item
+		margin: 20px auto
+
+	.video
+		max-width: 100%
+
+	.video__link
+		padding: 0
+
+	.clients--row-first .clinets__img,
+	.clients--row-second .clinets__img
+		position: relative
+		right: 0
+		left: 0
+	
+	.clients__info.info--second.info
+		padding: 0 15px
+
+	.clients--row-first .clients__info
+		margin: auto
+		padding: 0 15px
+
+	.type__item
+		width: 100%
+		padding: 10px 28px;
+		height: auto;
+		padding-top: 90px
+
+	.type__number
+		right: 15px;
+		top: -45px;
+	
+	.about
+		margin-top: 50px
+
+	.about__img
+		position: relative
+		right: 0
+
+	.about__more
+		max-width: 100%;
+		height: auto;
+
+	.about__more .more__link
+		line-height: 40px
+
+	.news__title
+		margin-bottom: 50px
+
+	.map__contact
+		width: 100%
+		padding: 15px
+
+
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

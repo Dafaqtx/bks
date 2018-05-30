@@ -1,0 +1,699 @@
+@import "normalize"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Exo 2', sans-serif
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.container 
+	max-width: 1160px
+	margin: auto
+	position: relative
+
+.header--wrapper
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: baseline
+	padding: 15px 0
+
+.menu
+	max-width: 660px
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	
+	&__sub
+		display: none
+		
+	&__item
+		padding: 0
+		margin: 0
+		list-style: none
+		position: relative
+		
+		&:hover::before
+			content: ''
+			position: absolute
+			top: -15px
+			width: 100%
+			border: 1px solid $accent
+		
+		&--active
+
+			.menu__sub
+				display: block
+				position: absolute
+				left: 0
+				list-style: none
+				margin: 0
+				padding: 0
+				background: $white
+				width: 100%
+				min-width: 220px
+				padding: 10px 0
+				z-index: 50
+
+		&--active::before
+			content: ''
+			position: absolute
+			top: -15px
+			width: 100%
+			border: 1px solid $accent
+	
+	&__link
+		text-decoration: none
+		color: $title-text
+		
+		&:hover
+			color: $accent
+			transition: all .3s ease
+
+.menu__item:not(:last-child) > .menu__link
+	background: url(../img/header/triangle-menu.png) 100% 55% no-repeat;
+	width: 125%;
+	display: block;
+
+.sub__link
+	display: block
+	padding: 3px 20px
+	clear: both
+	white-space: nowrap
+
+	&:hover
+		color: $white
+		background: $accent
+	
+.header__burger
+	display: none
+
+.hero 
+	background: url('../img/header/hero-bg.jpg') 100% 100% no-repeat
+
+	&__offer 
+		padding-top: 187px
+		color: $white
+		font-family: "Exo 2"
+		font-size: 36px
+		font-weight: 700
+		line-height: 54px
+		text-transform: uppercase
+		letter-spacing: 1.58px
+		margin-bottom: 102px
+
+		&--together
+			letter-spacing: 4.46px
+.btn
+	width: 160px
+	border-radius: 25px
+	text-align: center
+	position: relative
+	
+	&:hover
+		background: $accent
+
+	a
+		display: block
+		color: $title-text
+		font-size: 16px
+		font-weight: 500
+		line-height: 46px
+		text-decoration: none
+		text-align: center
+		background-position: -100%
+		transition: all .3s ease
+		
+		&:hover
+			color: $white
+
+	&:hover::before
+		content: ''
+		border: 2px solid $accent
+		height: 20px
+		position: absolute
+		width: 20px
+		background-color: transparent
+		top: 14px
+		right: -23px
+		transform: rotate(45deg)
+		border-left: none
+		border-bottom: none
+		transition: all 3s ease		
+
+	&::after
+		content: ''
+		position: absolute
+		width: 48px
+		height: 2px
+		background-color: $accent
+		top: 50%
+		right: -25px
+	
+
+	&__white
+		border: 2px solid $white
+
+	&__blue
+		border: 2px solid $accent
+		
+
+		a
+			color: $accent
+.trigger
+	margin-top: 110px
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	max-width: 560px
+	width: 100%
+
+	&__item
+		width: 160px
+		padding: 24px 0 32px 26px
+		border: 2px solid $accent
+		position: relative
+		transition: all .3s ease
+
+		&:hover
+			transform: translateY(-20px)
+			transition: all .3s ease
+		
+		&::after
+			content: ''
+			position: absolute
+			width: 160px
+			top: -12px
+			right: -10px
+			bottom: 8px
+			left: 8px
+			border: 1px solid #e6e6e6
+
+
+	&__first-row
+		color: $title-text
+		font-size: 18px
+		font-weight: 300
+		line-height: 24px
+		font-weight: 600
+
+	&__second-row
+		color: $title-text
+		font-size: 18px
+		line-height: 24px
+		font-weight: 400
+
+.video
+	width: 840px
+	height: 100px
+	background: url('../img/header/arrow-right-icon.png') 50% 50% $title-text no-repeat
+	margin: 168px 0 0 auto
+
+	&__link
+		display: block
+		color: $white
+		font-size: 24px
+		font-weight: 400
+		line-height: 100px
+		text-transform: uppercase
+		letter-spacing: 2.4px
+		text-decoration: none
+		padding-left: 100px
+		transition: all .3s ease
+
+		&:hover
+			color: $white
+			background: $accent
+			transition: all .3s ease
+
+.clients 
+	max-width: 1920px
+	margin: auto
+	position: relative
+	padding-top: 115px
+	
+	&__title
+		color: $title-text
+		font-size: 36px
+		font-weight: 400
+		letter-spacing: 7.2px
+		margin: 0 0 75px 0
+
+	&--row
+		display: flex
+		flex-wrap: wrap
+
+	&--row-second
+		flex-direction: row-reverse
+
+.info
+	margin: 63px 0 0 140px
+
+	&__header
+		display: flex
+		align-items: center
+
+	&__text
+		margin: 0 60px 0 0
+		color: $title-text
+		font-size: 24px
+		font-weight: 400
+		line-height: 48px
+
+		&--second
+			margin: 0 0 0 60px
+
+	&__list
+		margin: 25px 0 40px 0
+		padding: 0 0 0 40px
+		list-style: none
+
+	&__item
+		color: $text
+		font-size: 18px
+		font-weight: 400
+		line-height: 45px
+		position: relative
+
+		&::before
+			content: ''
+			position: absolute
+			width: 20px
+			height: 1px
+			left: -40px
+			background-color: $accent
+			top: 55%
+
+	&--second
+		margin-right: 240px
+
+.type
+	margin-top: 110px
+
+	&__title
+		margin: 0 0 80px 0
+		color: $title-text
+		font-size: 36px
+		font-weight: 400
+		line-height: 54px
+		letter-spacing: 7.2px
+		
+		&--accent
+			color: $accent
+
+	&--wrapper
+		max-width: 1920px
+		margin: auto
+		position: relative
+		display: flex
+		flex-wrap: wrap
+
+	&__item
+		display: flex
+		flex-direction: column
+		justify-content: center
+		width: (100% / 3)
+		min-height: 440px
+		background-color: #eeeeee
+		position: relative
+		padding-left: 100px
+		padding-right: 85px
+	    
+		&:hover
+			background: url('../img/clients/type-bg.jpg')
+
+			.type__number,
+			.type__name,
+			.type__text
+				color: $white
+			
+			.type__border
+				display: block
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				right: 20px;
+				bottom: 20px;
+				border: 2px solid $white;
+
+	&__border
+		display: none
+
+	&__number
+		color: #d0d0d0
+		font-size: 108px
+		font-weight: 400
+		position: absolute
+		right: 62px
+		top: 0
+
+	&__name
+		color: $title-text
+		font-size: 24px
+		font-weight: 400
+		line-height: 48px
+
+	&__text
+		color: $text
+		font-size: 16px
+		font-weight: 400
+		line-height: 32px
+
+.about
+	position: relative
+	margin-top: 200px
+	padding-top: 60px
+	background-color: #eeeeee
+	
+	&__title
+		color: $accent
+		font-size: 36px
+		font-weight: 400
+		line-height: 54px
+		letter-spacing: 7.2px
+		margin: 0
+	&__text
+		max-width: 690px
+		color: $title-text
+		font-size: 24px
+		font-weight: 400
+		line-height: 48px
+		margin: 30px 0 0 0
+	
+	&__subtext
+		max-width: 691px
+		color: $text
+		font-size: 16px
+		font-weight: 400
+		line-height: 32px
+		margin: 40px 0 0 0
+
+	&__img
+		position: absolute
+		right: 0
+		top: -80px
+	
+	&__more
+		width: 840px
+		height: 100px
+		background-color: $title-text
+		margin-top: 65px
+		background: url(../img/header/arrow-right-icon.png) 92% 50% #393939 no-repeat;
+
+		.more__link
+		    display: block
+		    color: $white
+		    font-size: 24px
+		    font-weight: 400
+		    line-height: 100px
+		    text-transform: uppercase
+		    letter-spacing: 2.4px
+		    text-decoration: none
+		    text-align: right
+		    padding-right: 125px
+		    transition: all .3s ease
+
+		    &:hover
+		    	background: $accent
+		    	color: $white
+		    	transition: all .3s ease
+
+	&__modern
+		position: absolute
+		right: 0
+		top: -100px
+.news
+	margin-top: 370px
+	
+	&--wrapper
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 70px
+	
+	&__title
+		color: $title-text
+		font-size: 36px
+		font-weight: 400
+		line-height: 54px
+		letter-spacing: 7.2px
+		margin: 0
+	
+	&__btn
+		width: 200px
+		margin-right: 25px
+
+	&__items
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	
+	&__item
+		max-width: 360px
+		width: 100%
+		margin-bottom: 65px
+		transition: all 1s ease
+
+	
+	&__link
+		position: absolute
+		width: 100%
+		top: 0
+		display: none
+		height: 70px
+		background-color: $title-text
+		color: $white
+		font-size: 24px
+		font-weight: 400
+		line-height: 70px
+		text-transform: uppercase
+		letter-spacing: 2.4px
+		text-decoration: none
+		padding-left: 40px
+		background: url(../img/header/arrow-right-icon.png) 53% 50% #393939 no-repeat;
+	
+	&__img
+		transition: all 1s ease
+
+		&:hover
+			transition: all 1s ease
+			transform: scale(1.223)
+			position: relative
+
+			.news__link
+				display: block
+				transition: all 1s ease
+
+	&__name
+		color: $title-text
+		font-size: 24px
+		font-weight: 400
+		margin-top: 32px
+
+	&__date
+		color: $accent
+		font-size: 16px
+		font-weight: 400
+		line-height: 36px
+
+	&__desc
+		color: $text
+		font-size: 16px
+		font-weight: 400
+		line-height: 32px
+		margin-top: 15px
+		
+#map 
+	width: 100%
+	height: 720px
+	position: relative
+
+.map
+	margin-top: 50px
+	
+	&--wrapper
+	    position: relative
+	    top: -520px
+	    max-width: 1160px
+	    margin: auto
+
+	&__contact
+		position: absolute
+		right: 0
+		width: 560px
+		box-shadow: 0 10px 60px rgba(0, 0, 0, 0.5)
+		background-color: $white
+		padding: 35px 110px 20px 55px
+
+	&__title
+		margin: 0
+		color: $title-text
+		font-size: 36px
+		font-weight: 400
+		line-height: 54px
+		letter-spacing: 7.2px
+
+	&__list
+		margin: 15px 0 0 0
+		padding: 0 0 0 0
+		list-style: none
+	
+	&__item
+		color: $title-text
+		font-size: 18px
+		font-weight: 400
+		line-height: 27px
+		margin-bottom: 30px
+		padding-left: 40px
+
+		&--address
+			background: url('../img/contact/location.png') 0 7px no-repeat
+
+		&--tel
+			background: url('../img/contact/phone.png') 0 5px no-repeat
+
+		&--email
+			background: url('../img/contact/mail.png') 0 10px no-repeat
+
+		&--work-time
+			background: url('../img/contact/house.png') 0 5px no-repeat
+
+.page-footer
+	padding: 35px 0
+
+.footer
+
+	&--wrapper
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+	&__info
+		max-width: 200px
+
+	&__tel
+		display: block
+		text-decoration: none
+		margin: 20px 0 20px 56px
+		color: #1e3162
+		font-size: 16px
+		font-weight: 400
+	
+	&__subscribe
+		color: $accent
+		font-size: 16px
+		font-weight: 400
+		margin: 0 0 20px 56px
+	
+	&__input--wrapper
+		position: relative
+
+	&__email
+		width: 200px
+		height: 48px
+		border-radius: 24px
+		border: 1px solid #e6e6e6
+		background-color: #f9f9f9
+		padding-left: 60px
+		color: #707070
+		font-size: 14px
+		font-weight: 400
+		line-height: 54px
+	
+	&__submit
+		position: absolute;
+		bottom: 3px;
+		left: 5px;
+		width: 41px
+		height: 41px
+		border: none
+		box-shadow: 0 4px 10px rgba(14, 122, 255, 0.5)
+		border-radius: 20px
+		background: url('../img/footer/send.png') 50% 30% no-repeat
+		padding: 0
+	
+	&__menu
+		margin: 0
+		padding: 0
+		list-style: none
+
+		&--wrapper
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			width: 860px
+
+	&__link
+		color: #707070
+		font-size: 14px
+		font-weight: 500
+		line-height: 30px
+		text-decoration: none
+		
+		&:hover
+			color: $title-text
+
+		&--main
+			display: block
+			color: $title-text
+			font-size: 16px
+			font-weight: 500
+			letter-spacing: 1.6px
+			margin-bottom: 15px
+			transition: all .3s ease
+
+			&:hover
+				color: $accent
+				transition: all .3s ease
+
+
+/* adaptive */
+@import "media"
